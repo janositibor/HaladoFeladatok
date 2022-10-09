@@ -1,0 +1,15 @@
+POST http://localhost:8080/api/location/create
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Könyvtár",
+  "lat": 1.1,
+  "lon": 3.5
+}
+
+###
+GET http://localhost:8080/api/locations
+Accept: application/json
+
+###

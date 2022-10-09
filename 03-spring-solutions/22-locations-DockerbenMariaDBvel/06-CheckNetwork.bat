@@ -1,0 +1,1 @@
+docker network inspect locations-net > 06-LocationsNet.txt

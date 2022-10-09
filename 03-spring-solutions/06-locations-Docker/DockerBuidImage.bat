@@ -1,0 +1,1 @@
+docker build -t locations . > out.txt

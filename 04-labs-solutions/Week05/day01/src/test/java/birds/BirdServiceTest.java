@@ -1,0 +1,45 @@
+package birds;
+
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
+import org.mockito.stubbing.OngoingStubbing;
+
+import java.util.List;
+import java.util.Map;
+
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+
+@ExtendWith(MockitoExtension.class)
+class BirdServiceTest {
+    @Mock
+    BirdDao birdDao;
+
+    @InjectMocks
+    BirdService birdService;
+
+    @Test
+    @DisplayName("Test bird species statistics")
+    void testGetBirdStatistics() {
+        Map<BirdSpecies, Integer> expected = Map.of(
+                BirdSpecies.SWALLOW, 1,
+                BirdSpecies.BLACKBIRD, 2
+        );
+        when(birdDao.listBirds()).thenReturn(List.of(
+                new Bird(BirdSpecies.BLACKBIRD),
+                new Bird(BirdSpecies.SWALLOW),
+                new Bird(BirdSpecies.BLACKBIRD)
+        ));
+
+        assertEquals(expected, birdService.getBirdStatistics());
+        verify(birdDao).listBirds();
+    }
+
+
+
+}

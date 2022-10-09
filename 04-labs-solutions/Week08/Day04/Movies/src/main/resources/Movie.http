@@ -1,0 +1,110 @@
+###
+GET http://localhost:8080/api/movies
+Accept: application/json
+
+
+###
+POST http://localhost:8080/api/movies
+Content-Type: application/json
+Accept: application/json
+
+{
+  "title": "Anyámék a havon",
+  "length": 95
+}
+
+###
+POST http://localhost:8080/api/movies
+Content-Type: application/json
+Accept: application/json
+
+{
+  "title": "Köszi a csokit",
+  "length": 85
+}
+
+###
+GET http://localhost:8080/api/movies/2
+Accept: application/json
+
+###
+GET http://localhost:8080/api/movies/22
+Accept: application/json
+
+###
+GET http://localhost:8080/api/movies/2/ratings
+Accept: application/json
+
+###
+GET http://localhost:8080/api/movies/22/ratings
+Accept: application/json
+
+###
+POST http://localhost:8080/api/movies/2/ratings
+Content-Type: application/json
+Accept: application/json
+
+{
+  "rating": 5
+}
+
+###
+POST http://localhost:8080/api/movies/2/ratings
+Content-Type: application/json
+Accept: application/json
+
+{
+  "rating": 4
+}
+
+###
+POST http://localhost:8080/api/movies/2/ratings
+Content-Type: application/json
+Accept: application/json
+
+{
+  "rating": -100
+}
+
+###
+POST http://localhost:8080/api/movies/2/ratings
+Content-Type: application/json
+Accept: application/json
+
+{
+  "rating": 3
+}
+
+###
+PUT http://localhost:8080/api/movies/2/update
+Content-Type: application/json
+Accept: application/json
+
+{
+  "title": "Pad a parkban!",
+  "length": 79
+}
+
+###
+GET http://localhost:8080/api/movies?minRatingCount=2
+Accept: application/json
+
+###
+GET http://localhost:8080/api/movies?minRatingCount=1&avg=4.5
+Accept: application/json
+
+###
+GET http://localhost:8080/api/movies/criteria?minRatingCount=1&avg=4.5
+Accept: application/json
+
+###
+GET http://localhost:8080/api/movies/criteria?minRatingCount=1
+Accept: application/json
+
+###
+GET http://localhost:8080/api/movies/criteria?avg=4.0
+Accept: application/json
+
+###
+GET http://localhost:8080/api/movies/criteria
+Accept: application/json

@@ -1,0 +1,1 @@
+docker run -d -e MYSQL_DATABASE=locations -e MYSQL_USER=locations -e MYSQL_PASSWORD=locations -e MYSQL_ALLOW_EMPTY_PASSWORD=yes -p 3308:3306 --network locations-net --name locations-net-mariadb mariadb > 02-DockerRun.txt

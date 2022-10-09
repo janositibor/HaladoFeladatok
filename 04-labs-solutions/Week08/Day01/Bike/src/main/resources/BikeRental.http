@@ -1,0 +1,20 @@
+POST http://localhost:8080/api/rentals
+Content-Type: application/json
+Accept: application/json
+
+{
+  "bikeID": "EB10",
+  "lastUserID": "Ur10",
+  "lastRentFinished": "2022-05-23 09:36:12",
+  "lastDistance": 3.5
+}
+
+
+
+###
+GET http://localhost:8080/api/rentals
+Accept: application/json
+
+###
+GET http://localhost:8080/api/rentals/from?start=2022-05-24T17:12:50
+Accept: application/json

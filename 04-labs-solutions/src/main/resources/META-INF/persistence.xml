@@ -1,0 +1,62 @@
+<persistence version="2.0"
+             xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence 
+			  http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+    
+	<persistence-unit name="football-pu" transaction-type="RESOURCE_LOCAL">
+		<class>Week03.FootballTeams.Team</class>
+		<class>Week03.FootballTeams.Player</class>
+<!--        <class>movies.Rating</class>-->
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+       <properties>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.user" value="userForFootballTeams"/>
+            <property name="javax.persistence.jdbc.password" value="PassForFootballTeamsDBUser"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/footballteamsDB"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MariaDB10Dialect"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="javax.persistence.schema-generation.database.action" value="drop-and-create" />
+        </properties>
+	</persistence-unit>
+    <persistence-unit name="football2-pu" transaction-type="RESOURCE_LOCAL">
+        <class>Week04.day04.Team</class>
+        <class>Week04.day04.Player</class>
+        <!--        <class>movies.Rating</class>-->
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.user" value="userForFootballTeams02"/>
+            <property name="javax.persistence.jdbc.password" value="PassForFootballTeamsDBUser02"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/footballteamsDB02"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MariaDB10Dialect"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="javax.persistence.schema-generation.database.action" value="drop-and-create" />
+        </properties>
+    </persistence-unit>
+	<persistence-unit name="test-pu" transaction-type="RESOURCE_LOCAL">
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:h2:mem:test"/>
+            <property name="javax.persistence.jdbc.user" value="sa"/>
+            <property name="javax.persistence.jdbc.password" value=""/>
+			
+            <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
+            <property name="hibernate.hbm2ddl.auto" value="create-drop" />
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.temp.use_jdbc_metadata_defaults" value="true"/>
+        </properties>
+	</persistence-unit>
+	
+	<persistence-unit name="pu" transaction-type="RESOURCE_LOCAL">
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.user" value="userForMovies"/>
+            <property name="javax.persistence.jdbc.password" value="PassForMoviesDBUser"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/moviesDB"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MariaDB10Dialect"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="javax.persistence.schema-generation.database.action" value="drop-and-create" />
+        </properties>
+    </persistence-unit>
+</persistence>

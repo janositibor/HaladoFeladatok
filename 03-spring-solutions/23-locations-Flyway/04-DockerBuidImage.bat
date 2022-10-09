@@ -1,0 +1,1 @@
+docker build -t locations . > 04-ApplicationImageBuilt.txt

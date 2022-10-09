@@ -1,0 +1,42 @@
+POST http://localhost:8080/api/car-sellers
+Content-Type: application/json
+
+{
+  "name": "Stefi"
+}
+
+###
+POST http://localhost:8080/api/car-sellers
+Content-Type: application/json
+
+{
+  "name": "Józsi"
+}
+
+###
+
+POST http://localhost:8080/api/car-sellers/1/cars
+Content-Type: application/json
+Accept: application/json
+
+{
+  "brand": "Toyota",
+  "type": "Corolla",
+  "age": 15,
+  "condition": "EXCELLENT",
+  "kmCounter": 95000
+}
+
+###
+
+POST http://localhost:8080/api/car-sellers/2/cars
+Content-Type: application/json
+Accept: application/json
+
+{
+  "brand": "BMW",
+  "type": "x3",
+  "age": 19,
+  "condition": "NORMAL",
+  "kmCounter": 350000
+}

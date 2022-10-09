@@ -1,0 +1,1 @@
+docker run -d -e SPRING_DATASOURCE_URL=jdbc:mariadb://locations-net-mariadb/locations -e SPRING_DATASOURCE_USERNAME=locations -e SPRING_DATASOURCE_PASSWORD=locations -p 8080:8080 --network locations-net --name locations locations > 05-ContainerRun.txt

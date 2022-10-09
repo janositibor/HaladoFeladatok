@@ -1,0 +1,56 @@
+POST http://localhost:8080/api/location/create
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Művház",
+  "lat": 11.1,
+  "lon": 34.5
+}
+###
+POST http://localhost:8080/api/location/create
+Content-Type: application/json
+Accept: application/json
+
+{
+"name": "Könyvtár",
+"lat": 1.1,
+"lon": 3.5
+}
+### Bad arguments to create
+POST http://localhost:8080/api/location/create
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "",
+  "lat": -111.1,
+  "lon": 355
+}
+
+###
+GET http://localhost:8080/api/locations
+Accept: application/json
+
+###
+GET http://localhost:8080/api/location/1
+Accept: application/json
+
+###
+PUT http://localhost:8080/api/location/update/1
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Lokomotív",
+  "lat": 10.1,
+  "lon": 13.5
+}
+
+###
+DELETE http://localhost:8080/api/location/delete/2
+Content-Type: application/json
+Accept: application/json
+
+
+###

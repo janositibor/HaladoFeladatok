@@ -1,0 +1,103 @@
+GET http://localhost:8080/api/cars
+Accept: application/json
+
+###
+POST http://localhost:8080/api/cars
+Content-Type: application/json
+Accept: application/json
+
+{
+  "brand": "Toyota",
+  "type": "Corolla",
+  "age": 15,
+  "condition": "Excellent",
+  "kmCounter": 95000
+}
+
+###
+POST http://localhost:8080/api/cars
+Content-Type: application/json
+Accept: application/json
+
+{
+  "brand": "BMW",
+  "type": "x3",
+  "age": 19,
+  "condition": "Normal",
+  "kmCounter": 350000
+}
+
+###
+POST http://localhost:8080/api/cars
+Content-Type: application/json
+Accept: application/json
+
+{
+  "brand": "Toyota",
+  "type": "Corolla",
+  "age": 25,
+  "condition": "Poor",
+  "kmCounter": 295000
+}
+
+###
+POST http://localhost:8080/api/cars
+Content-Type: application/json
+Accept: application/json
+
+{
+  "brand": "Toyota",
+  "type": "Auris",
+  "age": 5,
+  "condition": "Excellent",
+  "kmCounter": 55892
+}
+
+###
+GET http://localhost:8080/api/cars?brand=Toyota
+Accept: application/json
+
+###
+GET http://localhost:8080/api/cars?maxAge=20
+Accept: application/json
+
+###
+GET http://localhost:8080/api/cars?brand=Toyota&maxAge=17
+Accept: application/json
+
+###
+GET http://localhost:8080/api/cars?brand=Toyota&OrderBy=km
+Accept: application/json
+
+###
+GET http://localhost:8080/api/cars?brand=Toyota&OrderBy=km&OrderType=desc
+Accept: application/json
+
+###
+GET http://localhost:8080/api/cars?brand=Toyota&maxAge=15&OrderBy=km&OrderType=desc
+Accept: application/json
+
+###
+GET http://localhost:8080/api/cars/brands
+Accept: application/json
+
+###
+POST http://localhost:8080/api/cars/1/kilometerstates
+Content-Type: application/json
+Accept: application/json
+
+{
+  "kmCounter": 396230
+}
+
+###
+GET http://localhost:8080/api/cars/1
+Accept: application/json
+
+###
+DELETE http://localhost:8080/api/cars/3
+Content-Type: application/json
+Accept: application/json
+
+
+###
